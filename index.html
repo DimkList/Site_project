@@ -7,50 +7,109 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ТомБурИн</title>
 	<link rel="stylesheet" href="./css/style.css">
+	<!-- todo нужно будет оптимизировать загрузку шрифтов -->
 	<link
 		href="https://fonts.googleapis.com/css?family=MuseoModerno:900,regular,500,600,700,800,900&display=swap&subset=cyrillik-ext"
 		rel="stylesheet" />
 	<link
 		href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic&display=swap&subset=cyrillik-ext"
 		rel="stylesheet" />
+	<link rel="preload" href="/fonts/gothampro_medium.ttf" as="font">
 </head>
-
-<!-- TODO: Указать все ссылки на в тегах <A> корректно, рассмотреть возможности реализации меню через Aside, постараться не забыть почему классы названы именно так-->
 
 <body>
 	<div class="wrapper">
 		<div class="background">
-			<header class="header">
-				<div class="header__container _container">
+			<!--*Header*  -->
+			<header class="header container">
+				<div class="header__title">
 					<h1>ТомБур<br>Инжиниринг</h1>
 				</div>
 				<figure class="header__logo">
 					<img src="#" alt="ТомБурИН">
 				</figure>
 			</header>
-			<nav class="nav__menu">
-				<ul class="menu__list">
-					<li class="menu__item">
-						<a href="#" class="menu__link">Logo</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">О компании</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">Персонал</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">Регионы</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">Оборудование</a>
-					</li>
-					<li class="menu__item">
-						<a href="#" class="menu__link">Контакты</a>
-					</li>
-				</ul>
+			<!--*Nav*  -->
+			<nav class="nav-menu">
+				<a href="#" class="nav-menu__link logo">Logo</a>
+				<a href="#" class="nav-menu__link">О компании</a>
+				<a href="#" class="nav-menu__link">Персонал</a>
+				<a href="#" class="nav-menu__link">Регионы</a>
+				<a href="#" class="nav-menu__link">Оборудование</a>
+				<a href="#" class="nav-menu__link">Контакты</a>
 			</nav>
-			<main role="main"></main>
+			<!--*MAIN*  -->
+			<main role="main" class="container">
+				<!-- *Введение* -->
+				<div class="introdaction">
+					<article class="introdaction__article article">
+						<p>Инженерно-телеметрическое сопровождение бурения наклонно-направленных и горизонтальных
+							скважин с примененем телесистем с электромагнитным каналом передачи данных семейства СИБ.
+						</p>
+					</article>
+					<figure class="introdaction__circle"><img src="#" alt="circle"></figure>
+					<figure class="introdaction__vector"><img src="#" alt="line"></figure>
+				</div>
+				<!-- *О нас* -->
+				<div class="about">
+					<h2 class="title">о нас</h2>
+					<article class="about__article article">
+						<p>Компания организованна в 2014 году.<br>После ребрединга в 2017 году по настящее время
+							предприятие оказывает свои услуги.</p>
+					</article>
+					<article class="about__article article">
+						<p>Основным заказчиком является “АО БейкерХьюз”, при этом “ООО ТБИ” полностью интегрированно в
+							жесткую систему качества предъявляемым заказчиком и соответствует требованиям по качеству
+							замеров, подготовке персонала и оборудования, а так же проведению своевременных ремонтов и
+							обслуживния.</p>
+					</article>
+					<figure class="about__vector"><img src="#" alt="line"></figure>
+					<figure class="about__vector"><img src="#" alt="line"></figure>
+					<figure class="about__vector"><img src="#" alt="line"></figure>
+					<figure class="about__vector"><img src="#" alt="line"></figure>
+				</div>
+				<!-- *Регионы* -->
+				<div class="regions">
+					<h2 class="title">регионы <br>работ</h2>
+					<article class="regions__article article">
+						<div class="regions__map">
+							<!-- TODO--  ###Заглушка для карты###  -->
+						</div>
+						<p class="regions__text">Предприятием проводятся работы на нефтяных и газовых месторождениях
+							Томской области, ХМАО, ЯНАО, республики Саха (Якутия) и Иркутской области.</p>
+					</article>
+					<figure class="regions__vector"><img src="#" alt="line"></figure>
+					<figure class="regions__vector"><img src="#" alt="line"></figure>
+					<figure class="regions__vector"><img src="#" alt="line"></figure>
+				</div>
+				<!-- *Персонал* -->
+				<div class="staff">
+					<h2 class="title">персонал</h2>
+					<h3 class="subtitle">управление</h3>
+					<article class="staff__article article">
+						<p>Инженерно-телеметрическое сопровождение бурения наклонно-направленных и горизонтальных
+							скважин с примененем телесистем с электромагнитным каналом передачи данных семейства СИБ.
+						</p>
+					</article>
+					<div class="staff__slider slider">
+						<!--todo здесь будет каруселька -->
+					</div>
+					<article class="staff__article article">
+						<p>Стаж работы в отрасли звена управления не менее 10 лет.<br>Полевых спциалистов не менее 5
+							лет.<br>Текучесть кадров не превышает 2%.</p>
+					</article>
+					<figure class="staff__circle"><img src="#" alt="circle"></figure>
+					<figure class="staff__vector"><img src="#" alt="line"></figure>
+					<figure class="staff__vector"><img src="#" alt="line"></figure>
+					<figure class="staff__vector"><img src="#" alt="line"></figure>
+					<figure class="staff__vector"><img src="#" alt="line"></figure>
+				</div>
+				<!-- TODO Оборудование* -->
+				<!-- TODO ПО* -->
+				<!-- TODO Преимущества* -->
+				<!-- TODO Контакты* -->
+			</main>
+			<!-- TODO Footer* -->
 			<footer></footer>
 		</div>
 	</div>

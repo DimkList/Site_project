@@ -1,0 +1,18 @@
+@import "nullstyle.scss";
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+	.background {
+		position: absolute;
+		width: 2987px;
+		height: 16005px;
+		left: -612px;
+		top: 0px;
+		background: linear-gradient(180deg, #16181C 0%, rgba(89, 123, 155, 0.75) 20.31%, rgba(25, 64, 123, 0.841503) 49.48%, rgba(88, 118, 159, 0.65) 74.48%, #191D1E 100%);
+	}
+	.container {
+		max-width: 1920px;
+		margin: 0px auto;
+	}
