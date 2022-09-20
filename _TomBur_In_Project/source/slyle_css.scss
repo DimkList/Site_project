@@ -1,0 +1,36 @@
+@import '../source/globals/_nullstyle';
+@import '../source/globals/_fonts';
+@import '../source/variables/_var';
+@import '../source/variables/_mixins';
+@import '../source/globals/_general-layout';
+@import '../source/partial/_nav';
+@import '../source/partial/_header';
+@import '../source/partial/_main';
+@import '../source/partial/_map';
+@import '../source/partial/_card-box';
+@import '../source/globals/_slick';
+@import '../source/partial/_footer';
+
+body {
+	/* 	background-color: hsla(0, 0%, 24%, 1); */
+	background-blend-mode: lighten;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: 1920px;
+	overflow: hidden;
+	margin: 0 auto;
+	background: linear-gradient(180deg, #35688C 4.69%, #4A8FAD 22.92%, #5DA9D5 49.48%, #528CC2 67%, #183958 100%);
+}
+
+/* .linebox {
+	background: url('../img/Line.svg') 100% 286px/1917px 14842px no-repeat;
+} */
+
+/* .nav,
+.header,
+.main__section {
+	box-sizing: border-box;
+
+} */
