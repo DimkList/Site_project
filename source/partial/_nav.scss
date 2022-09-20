@@ -1,0 +1,27 @@
+.nav {
+	position: fixed;
+	height: 50vh;
+	margin-top: 25vh;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: space-between;
+
+	}
+
+	&__item {
+		display: inline-flex;
+		justify-self: space-between;
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+}
+
+
+
+.link {
+	display: block;
+
+}
