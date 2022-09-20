@@ -1,0 +1,61 @@
+.card-box {
+	width: minmax(100px, 100%);
+	min-height: fit-content;
+	margin: 0 auto;
+	overflow-x: visible;
+	position: relative;
+
+	margin-bottom: 650px;
+	margin-top: 150px;
+
+	&__list {
+		margin: 0 auto;
+		width: 100%;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		gap: 70px;
+
+	}
+
+	&__item {
+		width: clamp(100px, 33%, 500px);
+		aspect-ratio: 5/3;
+		position: relative;
+		border: 5px dotted;
+
+	}
+
+
+	&__rectangle {
+		width: 100%;
+		aspect-ratio: 5/3;
+		background: linear-gradient(180deg, hsla(191, 75%, 37%, 0.575) 0%, hsla(209, 100%, 91%, 0.925) 100%);
+		mix-blend-mode: overlay;
+	}
+
+	&__circle {
+		width: 45.08%;
+		height: 72.65%;
+		aspect-ratio: 1/1;
+		position: absolute;
+		top: 6.75%;
+		transform: translateX(-50%);
+	}
+
+	&__text-box-mini {}
+
+	&__light-box {
+		width: 51%;
+		aspect-ratio: 1/1.2;
+		margin: 0 auto;
+		transform: translate(25.5px, 33.5px);
+		background: linear-gradient(180deg, hsla(191, 75%, 37%, 0.30) 0%, hsla(209, 100%, 91%, 0.11) 100%);
+		;
+		mix-blend-mode: color-dodge;
+
+
+		/* 		border: 2px solid gold; */
+	}
+
+}
