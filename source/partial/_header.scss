@@ -30,13 +30,11 @@
 	}
 
 	&__logo {
-
 		flex: 1 1 20%;
 		justify-self: flex-end;
 		align-self: stretch;
 		position: relative;
 		min-height: fit-content;
-		/* 		height: calc((var(--title-font-s) * 2)); */
 		z-index: 1;
 	}
 
