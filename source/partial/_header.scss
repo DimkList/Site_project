@@ -1,12 +1,16 @@
 .header {
 	display: flex;
 	width: 100%;
-	margin-top: 65px;
+	margin-top: 6.02vh;
 	position: relative;
 	min-height: fit-content;
-	margin-bottom: 10vh;
+	margin-bottom: 0.5em;
 	flex-wrap: wrap;
 	align-content: flex-start;
+	font-family: 'Gotham Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: clamp(7.813rem, calc(14.6vw - 3rem), 12.5rem);
 
 
 	/*todo Добить в относительные значения*/
@@ -24,31 +28,36 @@
 		flex: 1 1 100%;
 		font-family: 'Roboto Mono-T';
 		font-weight: 100;
-		font-size: var(--fs-title-secondary);
+		font-size: 0.24em;
 		letter-spacing: 0.07em;
 		color: #FFFFFF;
 	}
 
 	&__logo {
-		flex: 1 1 20%;
+		flex: 1 1 30%;
 		justify-self: flex-end;
 		align-self: stretch;
 		position: relative;
-		min-height: fit-content;
+		min-height: 1%;
+		min-width: 1%;
 		z-index: 1;
 	}
 
+	&__logo img {
+		width: 15.1vw;
+		position: absolute;
+		max-width: 290px;
+		min-height: 1%;
+		right: -20%;
+	}
+
 	&__title {
-		flex: 1 1 80%;
-		font-family: 'Gotham Pro';
-		font-style: normal;
-		font-weight: 400;
-		font-size: clamp(7.813rem, calc(14.6vw - 3rem), 12.5rem);
+		flex: 1 0 70%;
 		min-height: fit-content;
 		position: relative;
 		justify-self: flex-start;
 		align-self: stretch;
-		height: calc((var(--lh-title) * 2));
+		height: 2.26em;
 		overflow: initial;
 	}
 
@@ -63,7 +72,7 @@
 	&__2blue {
 		top: 0px;
 		left: 0px;
-		color: hsla(209, 100%, 57%, 1);
+		color: hsla(209, 100%, 57%, 0.95);
 		mix-blend-mode: lighten;
 		filter: inner-shadow(6px 4px 0px 0px hsla(0, 0%, 0%, 0.25) inset);
 		z-index: 2;
@@ -79,20 +88,23 @@
 	}
 }
 
+
+
 @include for-desktop-down {
-	.header__title {
-		font-size: calc(var(--fs-title) * 0.625);
+	.header {
+		font-size: clamp(5.875rem, calc(14.4vw - 3rem), 7.813rem);
 	}
 }
 
 @include for-tablet-down {
-	.header__title {
-		font-size: calc(var(--fs-title) * 0.4688);
+	.header {
+		font-size: clamp(3.875rem, calc(14.3vw - 3rem), 5.875rem);
 	}
 }
 
 @include for-phone-down {
-	.header__title {
-		font-size: calc(var(--fs-title) * 0.3125);
+	.header {
+		font-size: clamp(3rem, calc(14vw - 3rem), 3.875rem);
+		// размеры нужно будет подогнать к мобильной версии после завершения ПК версии
 	}
 }

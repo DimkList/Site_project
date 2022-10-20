@@ -1,8 +1,5 @@
 .main {
-
 	display: block;
-
-
 
 	&__section {
 		width: 100%;
@@ -13,7 +10,7 @@
 
 .subtitle {
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 	font-family: var(--ff-accent);
 	font-weight: 800;
 	font-style: normal;
@@ -22,12 +19,13 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	mix-blend-mode: normal;
-	margin-left: 50px;
+	margin-left: 0.625em;
+	margin-bottom: 10vh;
 }
 
 .subtitle h4 {
 	font-size: calc(var(--fs-accent) * 0.6);
-
+	font-weight: 600;
 }
 
 .text-box {
@@ -38,47 +36,142 @@
 	mix-blend-mode: hard-light;
 	font-family: var(--ff-primary);
 	font-weight: 400;
-	font-size: clamp(0.875rem, calc(5vw - 1rem), 2.25rem);
-	/* тут нудо сделать медиазапросы и в них уже по частям назначать clamp */
+	font-size: var(--fs-primary);
 	line-height: 1.5em;
 	letter-spacing: 0.02em;
-	color: rgba(0, 209, 255, 1);
-	width: 50%;
-	left: 50%;
+	color: hsla(205, 100%, 82%, 1);
+	width: 47%;
+	left: 40%;
 	z-index: 2;
+	margin: 0 0 2em 0;
+	/* InnerShawow убрать у всех кроме персонал*/
+	/* box-shadow: inset 17px -26px 75px rgba(255, 255, 255, 0.25); */
 }
+
+@include for-desktop-down {
+	.text-box {
+		font-size: var(--fs-primary-d1200);
+	}
+
+	.subtitle {
+		font-size: var(--fs-accent-d1200);
+	}
+
+	.subtitle h4 {
+		font-size: calc(var(--fs-accent-d1200) * 0.6);
+	}
+}
+
+@include for-tablet-down {
+	.text-box {
+		font-size: var(--fs-primary-d900);
+	}
+
+	.subtitle {
+		font-size: var(--fs-accent-d900);
+	}
+
+	.subtitle h4 {
+		font-size: calc(var(--fs-accent-d900) * 0.6);
+	}
+}
+
+@include for-phone-down {
+	.text-box {
+		font-size: var(--fs-primary-d600);
+		// размеры нужно будет подогнать к мобильной версии после завершения ПК версии
+	}
+
+	.subtitle {
+		font-size: var(--fs-accent-d600);
+	}
+
+	.subtitle h4 {
+		font-size: calc(var(--fs-accent-d600) * 0.6);
+	}
+}
+
+#in2 {
+	position: relative;
+	mix-blend-mode: normal;
+}
+
+.patch1 {
+	background: hsla(205, 45%, 38%, 0.637);
+	mix-blend-mode: color-dodge;
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+}
+
+//технический объект для проверки blend-mode
 
 #intro {
 	position: relative;
-	left: 190px;
-	width: 46.5vw;
+	left: 13%;
+	width: 54.29%;
 	/* 	aspect-ratio: 11/5; */
 	min-height: 100px;
+	background-image: url(/temp/Rectangle63.svg);
+	background-color: hsla(0, 0%, 32%, 1);
+
+	background-blend-mode: hard-light;
+	margin-bottom: 16vh;
+	z-index: 2;
 
 }
 
-.about {
+
+// О НАС, ПРЕИМУЩЕСТВА
+// прокручиваемые участки
+.about, .excellence {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
-
-
-	height: 950px;
-	/*!todo: настроить относительный размер */
+	gap: 0;
+	height: 87.96vh;
+	/* todo: настроить относительный размер */
 	overflow-y: scroll;
 }
 
-.about .subtitle {
+.about .subtitle, .excellence .subtitle {
 	position: sticky;
 	top: 0;
 	align-self: flex-start;
+	margin-bottom: 0px;
+
 }
+
+.excellence .text-box, .contacts .text-box {
+	left: 0;
+}
+
+//партия регионов 
 
 .regions {
 	position: relative;
 	height: 1470px;
+	margin-bottom: 30vh;
 }
 
 .regions h3 {
-	margin-bottom: 100px;
+	margin-bottom: 30vh;
+}
+
+
+// ПО секция
+
+.software img {
+	position: absolute;
+	left: -100%;
+	top: 0;
+}
+
+.software .text-box {
+	left: 50%;
+	position: relative;
+}
+
+.slider {
+	display: none;
 }

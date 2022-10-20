@@ -6,16 +6,16 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		align-content: center;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: center;
 
 	}
 
 	&__item {
-		display: inline-flex;
-		justify-self: space-between;
-		flex-grow: 1;
-		flex-shrink: 1;
+		transform: rotate(270deg);
+		margin-bottom: 70px;
+		text-decoration: none;
+		color: #fff;
 	}
 }
 

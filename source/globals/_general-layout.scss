@@ -3,12 +3,15 @@
 	display: grid;
 	grid-template-columns: clamp(50px, 9.11vw, 145px) 1fr clamp(50px, 9.11vw, 145px);
 	grid-template-areas: "nav main null";
+	min-height: 100vh;
 
 	&__main-col {
 		margin: 0 auto;
 		grid-area: "main";
 		position: relative;
 		z-index: 2;
+		min-width: 0;
+		max-width: 3000px;
 
 	}
 
