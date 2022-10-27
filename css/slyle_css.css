@@ -153,8 +153,8 @@ h6 {
   --fs-accent-d900: clamp(1.25rem, calc(5.3vw - 1rem), 2.5rem);
   --fs-accent-d600: 20px;
   --clr-text-table: hsla(205, 100%, 82%, 1);
-  --clr-: #fff;
-  --clr-: #fff;
+  --vh-bar-chap: calc(19vh);
+  --clr-bar-chap: red;
   --clr-: #fff;
   --clr-: #fff;
 }
@@ -199,27 +199,50 @@ h6 {
 }
 
 .nav {
+  min-width: 1px;
+  width: 70vh;
   position: fixed;
-  height: 50vh;
-  margin-top: 25vh;
+  height: 2em;
+  margin: 0 auto;
+  font-family: "Roboto Mono";
+  font-size: 15px;
+  line-height: 20px;
+  transform-origin: 0 0 0;
+  transform: rotate(-90deg);
+  bottom: 10%;
 }
 
 .nav__list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+  min-width: 1px;
+  /* margin: 0 0 0 -35px; */
+  white-space: nowrap;
   justify-content: center;
 }
 
 .nav__item {
-  transform: rotate(270deg);
-  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+  flex: 0 0 20%;
+  width: max-content;
+  display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: #ffff;
+  padding: 0.3em 1em;
 }
 
-.link {
-  display: block;
+.nav__item__item::before {
+  content: 'hi';
+  /* content: url("data:image/svg+xml; utf8,%3Csvg width='175' height='42' viewBox='0 0 178 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0 0, 175 0, 132.25 42, 43.75 42' fill='transparent' stroke='white' stroke-width='3'/%3E%3C/svg%3E"); */
+}
+
+.nav__item a::before {
+  content: url("data:image/svg+xml; utf8,%3Csvg width='142' height='42' viewBox='0 0 178 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0 0, 175 0, 132.25 42, 43.75 42' fill='transparent' stroke='white' stroke-width='3'/%3E%3C/svg%3E");
+  position: absolute;
+  left: -1em;
+  top: 0;
+  width: 100%;
 }
 
 .header {
@@ -440,7 +463,8 @@ h6 {
   z-index: 2;
 }
 
-.about, .excellence {
+.about,
+.excellence {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -449,14 +473,16 @@ h6 {
   overflow-y: scroll;
 }
 
-.about .subtitle, .excellence .subtitle {
+.about .subtitle,
+.excellence .subtitle {
   position: sticky;
   top: 0;
   align-self: flex-start;
   margin-bottom: 0px;
 }
 
-.excellence .text-box, .contacts .text-box {
+.excellence .text-box,
+.contacts .text-box {
   left: 0;
 }
 

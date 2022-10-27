@@ -48,6 +48,7 @@
 	/* box-shadow: inset 17px -26px 75px rgba(255, 255, 255, 0.25); */
 }
 
+
 @include for-desktop-down {
 	.text-box {
 		font-size: var(--fs-primary-d1200);
@@ -125,7 +126,8 @@
 
 // О НАС, ПРЕИМУЩЕСТВА
 // прокручиваемые участки
-.about, .excellence {
+.about,
+.excellence {
 	display: flex;
 	flex-direction: column;
 	gap: 0;
@@ -134,7 +136,8 @@
 	overflow-y: scroll;
 }
 
-.about .subtitle, .excellence .subtitle {
+.about .subtitle,
+.excellence .subtitle {
 	position: sticky;
 	top: 0;
 	align-self: flex-start;
@@ -142,7 +145,8 @@
 
 }
 
-.excellence .text-box, .contacts .text-box {
+.excellence .text-box,
+.contacts .text-box {
 	left: 0;
 }
 
