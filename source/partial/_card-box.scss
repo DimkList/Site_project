@@ -1,3 +1,4 @@
+
 .card-box {
 	width: 100%;
 	min-height: fit-content;
@@ -9,6 +10,7 @@
 	font-size: 0.6875rem;
 	font-weight: 300;
 	line-height: 123.5%;
+	color: #FFFFFF;
 
 	&__list {
 		margin: 0 auto;
@@ -17,21 +19,19 @@
 		display: flex;
 		justify-content: space-around;
 		gap: 70px;
-
+		
 	}
-
+	
 	&__item {
 		width: clamp(100px, 29%, 500px);
 		aspect-ratio: 5/3;
 		position: relative;
-		/* border: 5px dotted; */
 	}
 
 	&__rectangle {
 		width: 100%;
-		aspect-ratio: 5/3;
-		background: linear-gradient(180deg, hsla(191, 75%, 37%, 0.575) 0%, hsla(209, 100%, 91%, 0.925) 100%);
-		mix-blend-mode: overlay;
+		height: 100%;
+		background: linear-gradient(180deg, hsla(191, 75%, 37%, .5) 0%, hsla(209, 100%, 91%, .4) 100%);
 	}
 
 	&__circle {
@@ -56,10 +56,7 @@
 	}
 
 	&__light-box {
-		/* transform: translate(25.5px, 33.5px); */
-		background: linear-gradient(180deg, hsla(191, 75%, 37%, 0.30) 0%, hsla(209, 100%, 91%, 0.11) 100%);
-		mix-blend-mode: color-dodge;
-		/* 		border: 2px solid gold; */
+		background: rgba(255, 255, 255, .15);
 	}
 
 	&__text-box-mini {

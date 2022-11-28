@@ -1,8 +1,22 @@
 html {
+	scroll-behavior: smooth;
 	background: linear-gradient(180deg, hsl(205, 45%, 38%) 4.69%, #4A8FAD 22.92%, #5DA9D5 49.48%, #528CC2 67%, #183958 100%);
 }
 
-body {}
+.wrapper {
+	max-width: 1920px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+//вот тут могут быть проблемы при адаптации !!!Note bene
+.background {
+	position: relative;
+	min-width: 100%;
+	height: fit-content;
+	z-index: 0;
+	mix-blend-mode: normal;
+}
 
 @import '../source/globals/_nullstyle';
 @import '../source/globals/_fonts';
@@ -16,26 +30,6 @@ body {}
 @import '../source/partial/_card-box';
 @import '../source/partial/_equipment.scss';
 @import '../source/partial/_footer';
+@import '../source/_test-ground';
 
-body {
-	box-sizing: border-box;
 
-}
-
-.wrapper {
-	max-width: 1920px;
-	overflow: hidden;
-	margin: 0 auto;
-	mix-blend-mode: normal;
-
-}
-
-//вот тут могут быть проблемы при адаптации !!!Note bene
-.background {
-	position: relative;
-	min-width: 100%;
-	height: fit-content;
-	z-index: 0;
-	background: linear-gradient(180deg, #35688C 4.69%, #4A8FAD 22.92%, #5DA9D5 49.48%, #528CC2 67%, #183958 100%);
-	background-image: url('/img/Line.svg') 100% no-repeat;
-}

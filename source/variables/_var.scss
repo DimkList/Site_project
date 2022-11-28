@@ -10,14 +10,14 @@
 		--fs-primary-d600: 16px;
 		// размер шрифта основной max-36px до 1440px
 
-		--fs-accent: clamp(3.75rem, calc(6vw - 1rem), 5rem);
-		// Min value (60px) ends at 1267 px. Max value (80px) starts at 1600 px
-		--fs-accent-d1200: clamp(2.5rem, calc(6.3vw - 1rem), 3.75rem);
-		// Min value (40px) ends at 889 px. Max value (60px) starts at 1206 px
-		--fs-accent-d900: clamp(1.25rem, calc(5.3vw - 1rem), 2.5rem);
-		// Min value (20px) ends at 571 px. Max value (40px) starts at 889 px
-		--fs-accent-d600: 20px;
-		// размер шрифта заголовков 80px
+		--fs-accent: clamp(4.25rem, calc(4vw + 1.5rem), 6.25rem);
+		// Min value (68px) ends at 1100 px. Max value (100px) starts at 1900 px.
+		--fs-accent-d1200: clamp(4.25rem, calc(4vw + 1.5rem), 6.25rem);
+		// Min value (68px) ends at 1100 px. Max value (100px) starts at 1900 px
+		--fs-accent-d900: clamp(3rem, calc(4vw + 1.5rem), 4.25rem);
+		// Min value (48px) ends at 600 px. Max value (68px) starts at 1100 px.
+		--fs-accent-d600: clamp(3rem, calc(4vw + 1.5rem), 4.25rem);
+		// Min value (48px) ends at 600 px. Max value (68px) starts at 1100 px.
 
 		--clr-text-table: hsla(205, 100%, 82%, 1);
 		// цвет текста

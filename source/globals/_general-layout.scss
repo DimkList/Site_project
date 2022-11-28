@@ -7,34 +7,22 @@
 
 	&__main-col {
 		margin: 0 auto;
-		grid-area: "main";
+		grid-area: main;
 		position: relative;
 		z-index: 2;
 		min-width: 0;
 		max-width: 3000px;
-
 	}
 
 	&__nav-col {
-		grid-area: "nav";
+		grid-area: nav;
 		position: relative;
 		z-index: 3;
 	}
 
 	&__null-col {
-		grid-area: "null";
+		grid-area: null;
 		position: relative;
 		z-index: 1;
 	}
-}
-
-#line {
-	position: absolute;
-	width: 1917px;
-	height: 14842px;
-	top: 286px;
-	right: -7%;
-
-	box-shadow: inset 0px -25px 0px rgba(0, 35, 67, 0.55);
-	filter: drop-shadow(0px 87px 0px rgba(0, 0, 0, 0.25));
 }
