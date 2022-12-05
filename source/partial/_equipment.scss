@@ -184,9 +184,20 @@
 	gap: 4em;
 }
 
-/* 
-<p class="tb-characteristic"></p>
-<p class="tb-value"></p>
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
 
+@include for-desktop-down {
+	
+}
 
-*/
+@include for-tablet-down {}
+
+@include for-phone-down {
+
+.equipment__tables, #sib22 {
+	display: none;
+}
+.equipment .text-box {
+	left:auto;
+}
+}

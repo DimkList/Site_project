@@ -15,7 +15,7 @@ html {
 	min-width: 100%;
 	height: fit-content;
 	z-index: 0;
-	mix-blend-mode: normal;
+	//mix-blend-mode: normal;
 }
 
 @import '../source/globals/_nullstyle';
@@ -26,10 +26,9 @@ html {
 @import '../source/partial/_nav';
 @import '../source/partial/_header';
 @import '../source/partial/_main';
-@import '../source/partial/_map';
-@import '../source/partial/_card-box';
-@import '../source/partial/_equipment.scss';
+@import '../source/partial/_regions';
+@import '../source/partial/_personnel';
+@import '../source/partial/_equipment';
+@import '../source/partial/_software';
 @import '../source/partial/_footer';
 @import '../source/_test-ground';
-
-

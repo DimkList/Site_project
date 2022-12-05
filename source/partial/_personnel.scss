@@ -1,0 +1,103 @@
+.card-box {
+	width: 100%;
+	min-height: fit-content;
+	margin: 0 auto;
+	//overflow-x: visible;
+	/* 	position: relative; */
+	margin-bottom: 14vh;
+	font-family: var(--ff-primary);
+	font-size: 0.6875rem;
+	font-weight: 300;
+	line-height: 123.5%;
+	color: #FFFFFF;
+
+	&__list {
+		margin: 0 auto;
+		width: 100%;
+		top: 0;
+		display: flex;
+		justify-content: space-around;
+		gap: 70px;
+
+	}
+
+	&__item {
+		width: clamp(100px, 29%, 500px);
+		aspect-ratio: 5/3;
+		position: relative;
+	}
+
+	&__rectangle {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, hsla(191, 75%, 37%, .1) 0%, hsla(209, 100%, 91%, .1) 100%);
+	}
+
+	&__circle {
+		width: 45.08%;
+		height: 72.65%;
+		aspect-ratio: 1/1;
+		position: absolute;
+		top: 6.75%;
+		transform: translateX(-50%);
+	}
+
+	&__text-box-mini,
+	&__light-box {
+		width: 51%;
+		aspect-ratio: 1/1.2;
+		margin: 0 auto;
+		position: absolute;
+		left: 30%;
+		top: 12.41%;
+		font-size: inherit;
+		padding: 1.2em 0.85em 0 2.27em;
+	}
+
+	&__light-box {
+		background: rgba(255, 255, 255, .05);
+	}
+
+	&__text-box-mini {
+		height: 89%;
+		overflow: hidden;
+	}
+
+	&__text-box-mini h5 {
+		font-size: 1.56em;
+		font-weight: 900;
+		padding: 0 0 1.5em;
+		line-height: 130%;
+	}
+
+	&__text-box-mini p {
+		padding: 0 0 1.3em;
+
+	}
+}
+
+.subtitle h4 {
+	margin-top: 2em;
+}
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-down {}
+
+@include for-tablet-down {}
+
+@include for-phone-down {
+	.card-box {
+		overflow-x: visible;
+		/* 	position: relative; */
+		font-size: 0.5775rem;
+
+		&__list {
+			display: block;
+
+		}
+
+		&__item {
+			transform: scale(0.7);
+		}
+	}
+}

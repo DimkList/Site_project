@@ -6,9 +6,9 @@
 
 		--fs-primary: clamp(1.875rem, calc(3.15vw - 1rem), 2.25rem);
 		--fs-primary-d1200: clamp(1.5rem, calc(4vw - 1rem), 1.875rem);
-		--fs-primary-d900: clamp(1.25rem, calc(5.3vw - 1rem), 1.5rem);
-		--fs-primary-d600: 16px;
-		// размер шрифта основной max-36px до 1440px
+		--fs-primary-d900: clamp(0.688rem, calc(5vw - 1.5rem), 1.031rem);
+		--fs-primary-d600: clamp(0.688rem, calc(5vw - 1.5rem), 1.031rem);
+		// Min value (11px) ends at 700 px. Max value (16.5px) starts at 810 px.
 
 		--fs-accent: clamp(4.25rem, calc(4vw + 1.5rem), 6.25rem);
 		// Min value (68px) ends at 1100 px. Max value (100px) starts at 1900 px.

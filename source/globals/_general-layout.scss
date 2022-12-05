@@ -26,3 +26,12 @@
 		z-index: 1;
 	}
 }
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-down {}
+@include for-tablet-down {}
+@include for-phone-down {
+	.grid {
+		grid-template-columns: clamp(30px, 6.7vw, 145px) 1fr clamp(30px, 6.7vw, 145px);
+	}
+}

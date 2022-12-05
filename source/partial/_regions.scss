@@ -1,0 +1,59 @@
+.regions {
+	position: relative;
+	//height: 1470px;
+	margin-bottom: 70vh;
+}
+
+// !todo адаптировать для мобилки
+
+.regions .subtitle {
+	margin-bottom: 30vh;
+}
+
+#map {
+	position: absolute;
+	width: 100%;
+	aspect-ratio: 1/1;
+	//overflow: visible;
+	top: 0;
+	transform: scale(1.25);
+	//left: -145px;
+	//z-index: 0;
+	//opacity: 0.9;
+	//filter: drop-shadow(0px 9.05121px 9.05121px #000000) drop-shadow(0px 36.2049px 4.52561px rgba(33, 198, 255, 0.64));
+}
+
+#dotmap {
+	position: absolute;
+	overflow: visible;
+	top: 520px;
+	left: -100px;
+	z-index: 0;
+	display: none;
+	
+}
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-down {}
+
+@include for-tablet-down {}
+	
+	@include for-phone-down {
+	.regions {
+		margin-bottom: 18vh;
+	}
+
+	.regions .subtitle {
+		margin-bottom: 3em;
+	}
+	.regions .text-box {
+		width: 56%;
+		left: 35%;
+		margin: 0 0 2em;
+		padding: .75em 2em;
+	}
+
+	#map {
+		top: 30%;
+	}
+}

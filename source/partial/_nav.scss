@@ -100,3 +100,12 @@
 	border-bottom: 0.7em solid aqua;
 	
 }
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-down {}
+@include for-tablet-down {}
+@include for-phone-down {
+	.nav {
+		display: none;
+	}
+}
