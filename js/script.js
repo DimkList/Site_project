@@ -5,7 +5,6 @@ const slider = new A11YSlider(document.querySelector('.slider'), {
 	slidesToShow: 1,
 	skipBtn: false,
 	autoplay: true,
-	
 });
 
 const slider2 = new A11YSlider(document.querySelector('.personnel__slider'), {
