@@ -30,7 +30,7 @@
 	&__rectangle {
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(180deg, hsla(191, 75%, 37%, .1) 0%, hsla(209, 100%, 91%, .1) 100%);
+		background: transparent;
 	}
 
 	&__circle {
@@ -40,6 +40,8 @@
 		position: absolute;
 		top: 6.75%;
 		transform: translateX(-50%);
+		border-radius: 50%;
+		border: 1px solid transparent;
 	}
 
 	&__text-box-mini,
@@ -55,7 +57,7 @@
 	}
 
 	&__light-box {
-		background: rgba(255, 255, 255, .05);
+		background: transparent;
 	}
 
 	&__text-box-mini {
@@ -74,6 +76,20 @@
 		padding: 0 0 1.3em;
 
 	}
+}
+
+#card03 .card-box__circle {
+	background-image: url(../img/Guretski.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#card02 .card-box__circle {
+	background-image: url(../img/Seleznev.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
 .subtitle h4 {

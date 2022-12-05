@@ -6,11 +6,17 @@
 		margin-bottom: 10vh;
 		min-height: fit-content;
 		scroll-margin-top: 3em;
-		border: .2em solid purple;
+		border: .2em solid transparent;
 	}
 
 }
 
+.main a,
+a:visited {
+	font-size: 1.12em;
+	text-decoration: underline;
+	color: currentColor;
+}
 
 .main__section:first-of-type .text-box::before {
 	content: url(/img/dec-button.svg);
@@ -22,6 +28,7 @@
 }
 
 .subtitle {
+	display: inline-block;
 	position: relative;
 	z-index: 3;
 	font-family: var(--ff-accent);
@@ -32,6 +39,20 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	margin-bottom: 0.75em;
+	//margin-left: .5em;
+}
+
+.subtitle h3::before {
+	content: '';
+	min-width: .5em;
+	min-height: .5em;
+	position: absolute;
+	left: -0.6em;
+	top: .15em;
+	background-image: url(../img/logo_small.gif);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
 
 }
 
@@ -95,8 +116,12 @@
 	left: 0;
 }
 
-.a11y-slider-container>button {
+.a11y-slider-autoplay {
 	display: none;
+}
+
+.sertificat img {
+	margin: 0 auto;
 }
 
 // ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
