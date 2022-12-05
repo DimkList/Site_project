@@ -427,6 +427,14 @@ h6 {
   margin-bottom: 10vh;
   min-height: fit-content;
   scroll-margin-top: 3em;
+  border: .2em solid transparent;
+}
+
+.main a,
+a:visited {
+  font-size: 1.12em;
+  text-decoration: underline;
+  color: currentColor;
 }
 
 .main__section:first-of-type .text-box::before {
@@ -438,6 +446,7 @@ h6 {
 }
 
 .subtitle {
+  display: inline-block;
   position: relative;
   z-index: 3;
   font-family: var(--ff-accent);
@@ -448,6 +457,19 @@ h6 {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 0.75em;
+}
+
+.subtitle h3::before {
+  content: '';
+  min-width: .5em;
+  min-height: .5em;
+  position: absolute;
+  left: -0.6em;
+  top: .15em;
+  background-image: url(../img/logo_small.gif);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .subtitle h4 {
@@ -505,8 +527,12 @@ h6 {
   left: 0;
 }
 
-.a11y-slider-container > button {
+.a11y-slider-autoplay {
   display: none;
+}
+
+.sertificat img {
+  margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
@@ -642,6 +668,8 @@ h6 {
   position: absolute;
   top: 6.75%;
   transform: translateX(-50%);
+  border-radius: 50%;
+  border: 1px solid transparent;
 }
 
 .card-box__text-box-mini, .card-box__light-box {
@@ -673,6 +701,20 @@ h6 {
 
 .card-box__text-box-mini p {
   padding: 0 0 1.3em;
+}
+
+#card03 .card-box__circle {
+  background-image: url(../img/Guretski.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#card02 .card-box__circle {
+  background-image: url(../img/Seleznev.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .subtitle h4 {
