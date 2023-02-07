@@ -1,0 +1,280 @@
+.equipment {
+	width: 100%;
+}
+
+.equipment .text-box {
+	left: 30%;
+}
+
+#sib22 {
+	width: 116%;
+	position: relative;
+	left: -8%;
+	margin: 5em 0;
+}
+
+.equipment__tables,
+.mobile-tables {
+	font-family: var(--ff-primary);
+	font-weight: 400;
+	font-size: clamp(0.9rem, calc(2vw - 1rem), 1.25rem); //Min value (14.4px) ends at 1520 px. Max value (20px) starts at 1800 px.
+	text-align: left;
+	line-height: 1.245em;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 0.3fr repeat(2, 0.2fr) 0.7fr;
+	grid-template-rows: repeat(3, fit-content);
+	row-gap: 2em;
+	color: hsla(0, 0%, 100%, 1);
+	margin: 0 0 4em 0;
+	overflow: visible;
+}
+
+.tables-item {
+	background-color: rgba(0, 0, 0, 0.66);
+	min-height: 50px;
+	min-width: 50px;
+	max-width: 100%;
+	padding: 1em 4em 2em;
+}
+
+#tab1 {
+	grid-area: 1 / 1 / 2 / 6;
+}
+
+#tab2 {
+	grid-area: 2 / 1 / 3 / 3;
+}
+
+#tab3 {
+	grid-area: 3 / 1 / 4 / 4;
+}
+
+#tab4 {
+	grid-area: 2 / 5 / 4 / 6;
+}
+
+// * Таблица 1
+.tab1-columns {
+	//грид первой таблицы
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	column-gap: 2em;
+}
+
+.tab1-columns>div {
+	//колонки таб1
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1.5em;
+	margin: 0 3em 0 0;
+
+}
+
+.tab1-columns section {
+	//строки первой таблицы
+	font-size: inherit;
+	display: flex;
+	flex-wrap: nowrap;
+	column-gap: 2em;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tab1-columns span {
+	font-size: 0.5em;
+}
+// ваще жесть маленькие кусочки таблицы
+.tab1-columns span #magnadur {
+	font-size: 0.75em;
+}
+
+.table-header {
+	grid-column: 1 / span 2;
+	grid-row: 1;
+	font-size: 2.4em;
+	line-height: 1.2em;
+	margin-bottom: 1.3em;
+}
+
+.tb-characteristic {
+	flex: 0 1 content;
+	color: var(--clr-text-table);
+
+}
+
+.tb-value {
+	flex: 0 1 35%;
+	font-size: 2em;
+}
+
+.tb-line {
+	// * разделитель в тб.1 отрезки
+	flex: 1 1 1%;
+	align-self: center;
+	min-height: 1em;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='tb-line'%3E%3Ccircle cx='6%25' cy='50%25' r='6' fill='hsla(0, 0%25, 100%25, 1)' %3E%3C/circle%3E%3Cline x1='6%25' y1='50%25' x2='94%25' y2='50%25' stroke-width='2' stroke='hsla(0, 0%25, 100%25, 1)' vector-effect='none'/%3E%3Ccircle cx='94%25' cy='50%25' r='6' fill='hsla(0, 0%25, 100%25, 1)' vector-effect='none'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+// * Одноколоночные таблицы (таб2 и таб3 и табб4)
+.tab-column {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1.5em;
+	margin: 0 3em 0 0;
+
+}
+
+.tab-column section {
+	font-size: inherit;
+	display: flex;
+	flex-wrap: nowrap;
+	column-gap: 2em;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tb2-characteristic {
+	flex: 1 0 content;
+	color: var(--clr-text-table);
+
+}
+
+.tb2-value {
+	flex: 0 1 50%;
+	font-size: 1.5em;
+}
+
+.tb3-characteristic {
+	flex: 1 0 28%;
+	color: var(--clr-text-table);
+
+}
+
+.tb3-value {
+	flex: 0 1 25%;
+	font-size: 1.5em;
+}
+
+.tb3-value span {
+	font-size: 0.7em;
+}
+
+.tb4-characteristic {
+	flex: 0 1 100%;
+	font-size: 1.25em;
+	color: var(--clr-text-table);
+	line-height: 1.5em;
+}
+
+#tab4 .tab-column {
+	gap: 4em;
+}
+
+//  * Селекторы табличного раздела в файле tables-mobile.html
+.wrapper>.mobile-tables {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.equipment a {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	text-decoration: none;
+}
+
+// * Кнопка для мобилок
+button.tables {
+	display: none;
+	width: 90%;
+	height: 2em;
+	margin: 0 auto 2em;
+	font-size: 1em;
+	font-family: var(--ff-primary);
+	border-radius: 2em;
+	color: white;
+	background-color: rgb(59, 146, 228);
+	box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-wide-down {
+
+	.equipment__tables,
+	.mobile-tables {
+		font-size: clamp(0.75rem, calc(2.75vw - 1.5rem), 0.9rem);
+	}
+
+	#sib22 {
+		margin: 3em 0;
+	}
+}
+
+@include for-desktop-down {
+
+	.equipment__tables,
+	.mobile-tables {
+		font-size: clamp(0.563rem, calc(3.3vw - 1.5rem), 0.75rem);
+	}
+
+	.tb-line {
+		min-height: 1em;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='tb-line'%3E%3Ccircle cx='7%25' cy='50%25' r='4.5' fill='hsla(0, 0%25, 100%25, 1)' %3E%3C/circle%3E%3Cline x1='7%25' y1='50%25' x2='93%25' y2='50%25' stroke-width='1.5' stroke='hsla(0, 0%25, 100%25, 1)' vector-effect='none'/%3E%3Ccircle cx='93%25' cy='50%25' r='4.5' fill='hsla(0, 0%25, 100%25, 1)' vector-effect='none'%3E%3C/circle%3E%3C/svg%3E");
+	}
+
+	#sib22 {
+		margin: 2em 0;
+	}
+}
+
+@include for-tablet-down {
+
+	.equipment__tables,
+	.mobile-tables {
+		font-size: clamp(0.375rem, calc(3.9vw - 1.5rem), 0.563rem);
+	}
+
+	.tb-line {
+		min-height: 1em;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='tb-line'%3E%3Ccircle cx='7.5%25' cy='50%25' r='4' fill='hsla(0, 0%25, 100%25, 1)' %3E%3C/circle%3E%3Cline x1='7.5%25' y1='50%25' x2='92.5%25' y2='50%25' stroke-width='1.5' stroke='hsla(0, 0%25, 100%25, 1)' vector-effect='none'/%3E%3Ccircle cx='92.5%25' cy='50%25' r='4' fill='hsla(0, 0%25, 100%25, 1)' vector-effect='none'%3E%3C/circle%3E%3C/svg%3E");
+	}
+
+	#sib22 {
+		margin: 0.5em 0;
+	}
+}
+
+@include for-phone-down {
+
+	.equipment__tables,
+	.mobile-tables {
+		font-size: 0.45rem;
+	}
+
+	.tb-line {
+		min-height: 1em;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='tb-line'%3E%3Ccircle cx='7.5%25' cy='50%25' r='2' fill='hsla(0, 0%25, 100%25, 1)' %3E%3C/circle%3E%3Cline x1='7.5%25' y1='50%25' x2='92.5%25' y2='50%25' stroke-width='1.5' stroke='hsla(0, 0%25, 100%25, 1)' vector-effect='none'/%3E%3Ccircle cx='92.5%25' cy='50%25' r='2' fill='hsla(0, 0%25, 100%25, 1)' vector-effect='none'%3E%3C/circle%3E%3C/svg%3E");
+	}
+
+	//! Плохо выглядит для телефона в портретной ориентации, надо придумать решение
+
+	.equipment__tables,
+	#sib22 {
+		display: none;
+	}
+
+	.equipment .text-box {
+		left: auto;
+	}
+
+	button.tables {
+		display: block;
+	}
+}

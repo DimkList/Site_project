@@ -1,0 +1,31 @@
+	:root {
+		--ff-primary: 'roboto-mono';
+		// шрифт основной
+		--ff-accent: 'object-sans';
+		// шрифт заголовков
+
+		--fs-primary: clamp(1.875rem, calc(3.15vw - 1rem), 2.25rem);
+		--fs-primary-d1200: clamp(1.5rem, calc(4vw - 1rem), 1.875rem);
+		--fs-primary-d900: clamp(0.688rem, calc(5vw - 1.5rem), 1.031rem);
+		--fs-primary-d600: clamp(0.688rem, calc(5vw - 1.5rem), 1.031rem);
+		// Min value (11px) ends at 700 px. Max value (16.5px) starts at 810 px.
+
+		--fs-accent: clamp(4.25rem, calc(4vw + 1.5rem), 6.25rem);
+		// Min value (68px) ends at 1100 px. Max value (100px) starts at 1900 px.
+		--fs-accent-d1200: clamp(4.25rem, calc(4vw + 1.5rem), 6.25rem);
+		// Min value (68px) ends at 1100 px. Max value (100px) starts at 1900 px
+		--fs-accent-d900: clamp(3rem, calc(4vw + 1.5rem), 4.25rem);
+		// Min value (48px) ends at 600 px. Max value (68px) starts at 1100 px.
+		--fs-accent-d600: clamp(2.2rem, calc(2.2vw + 1.5rem), 4.25rem);
+		// ! Min value (48px) ends at 600 px. Max value (68px) starts at 1100 px. Изменено поправить!!!
+
+		--clr-text-table: hsla(205, 100%, 82%, 1);
+		// цвет текста
+		// дичь
+		--clr-bar-chap: red;
+		// дичь
+		--clr-: #fff;
+		// дичь
+		--clr-: #fff;
+		// дичь
+	}

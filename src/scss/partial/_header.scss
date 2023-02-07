@@ -1,0 +1,110 @@
+.header {
+	display: flex;
+	width: 84.375%;
+	margin: 0.15em auto 0.5em;
+	position: relative;
+	min-height: fit-content;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	font-family: 'Gotham Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: clamp(7.813rem, calc(14.6vw - 3rem), 12.5rem);
+
+
+	// * Три слоя заголовка
+	&__1white,
+	&__2blue,
+	&__3deepblue {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font: inherit;
+	}
+
+	&__slogan {
+		text-align: center;
+		flex: 1 1 100%;
+		font-family: 'Roboto Mono-T';
+		font-weight: 100;
+		font-size: 0.24em;
+		letter-spacing: 0.07em;
+		color: #FFFFFF;
+	}
+
+	&__logo {
+		flex: 1 1 30%;
+		justify-self: flex-end;
+		align-self: stretch;
+		position: relative;
+		min-height: 1%;
+		min-width: 1%;
+		z-index: 1;
+	}
+
+	&__logo img {
+		width: 100%;
+		position: absolute;
+		max-width: 100%;
+		min-height: 1%;
+		right: -20%;
+	}
+
+	&__title {
+		flex: 1 0 70%;
+		min-height: fit-content;
+		position: relative;
+		justify-self: flex-start;
+		align-self: stretch;
+		height: 2.26em;
+		overflow: initial;
+	}
+
+	&__1white {
+		mix-blend-mode: lighten;
+		color: hsla(0, 0%, 100%, 0.95);
+		z-index: 13;
+		left: -2px;
+		top: -4px;
+	}
+
+	&__2blue {
+		top: 0px;
+		left: 0px;
+		color: hsla(209, 100%, 57%, 0.95);
+		mix-blend-mode: lighten;
+		filter: inner-shadow(6px 4px 0px 0px hsla(0, 0%, 0%, 0.25) inset);
+		z-index: 2;
+	}
+
+	&__3deepblue {
+		left: 4.01px;
+		top: -2px;
+		mix-blend-mode: luminosity;
+		color: hsla(220, 100%, 13%, 0.95);
+		filter: drop-shadow(-3px 2px 0px hsla(0, 0%, 0%, 0.25));
+		z-index: 1;
+	}
+}
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-wide-down {}
+
+@include for-desktop-down {
+	.header {
+		font-size: clamp(5.875rem, calc(14.4vw - 3rem), 7.813rem);
+	}
+}
+
+@include for-tablet-down {
+	.header {
+		font-size: clamp(3.875rem, calc(14.3vw - 3rem), 5.875rem);
+	}
+}
+
+@include for-phone-down {
+	.header {
+		font-size: clamp(3rem, calc(14vw - 3rem), 3.875rem);
+		// размеры нужно будет подогнать к мобильной версии после завершения ПК версии
+	}
+}

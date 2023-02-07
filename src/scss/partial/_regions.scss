@@ -1,0 +1,148 @@
+.regions {
+	position: relative;
+	height: fit-content;
+	margin-bottom: 10em;
+}
+
+.regions .subtitle {
+	margin-bottom: 0em;
+}
+.regions .text-box {
+	position: absolute;
+	top: 40%;
+}
+.map-area {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	transform: scale(1.25);
+}
+
+#map {
+	transform-origin: 50% 50%;
+	position: relative;
+	width: 100%;
+	//aspect-ratio: 1/1;
+	top: 0;
+	z-index: 1;
+	opacity: 0.9;
+}
+
+#dotmap {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+
+// * определяет положение дискретных точек на карте 
+
+#dotmap>img {
+	transform: scale(.06);
+	transform-origin: 0% 0%;
+	position: absolute;
+	z-index: 99;
+	
+}
+
+#dotmap>img[src$='Tomsk_1.png'] {
+	top: 75.5%;
+	left: 42%;
+}
+
+#dotmap>img[src$='Uvat_1.png'] {
+	top: 62.5%;
+	left: 12.5%;
+}
+
+#dotmap>img[src$='Lensk_1.png'] {
+	top: 45%;
+	left: 89.5%;
+}
+
+#dotmap>img[src$='Tumen_1.png'] {
+	top: 69%;
+	left: 6%;
+}
+
+#dotmap>img[src$='Mirny_1.png'] {
+	top: 32%;
+	left: 91%;
+}
+
+#dotmap>img[src$='Surgut_1.png'] {
+	top: 56.4%;
+	left: 17.9%;
+}
+
+#dotmap>img[src$='Noyabrsk_1.png'] {
+	top: 53.5%;
+	left: 22.8%;
+}
+
+#dotmap>img[src$='Gubensky_1.png'] {
+	top: 48.8%;
+	left: 24.5%;
+}
+
+#dotmap>img[src$='Nefteugansk_1.png'] {
+	top: 56.8%;
+	left: 21.9%;
+}
+
+#dotmap>img[src$='Krasnoyarsk_1.png'] {
+	top: 75%;
+	left: 55%;
+}
+
+#dotmap>img[src$='NovijUrengoy_1.png'] {
+	top: 41.5%;
+	left: 29.5%;
+}
+
+#dotmap>img[src$='Nijnevartovsk_1.png'] {
+	top: 59.8%;
+	left: 26%;
+}
+
+#dotmap>img[src$='Irkutsk_1.png'] {
+	top: 88%;
+	left: 67%;
+}
+
+#dotmap>img:hover {
+	@keyframes zoomin {
+		from {
+			transform: scale(0.06);
+		}
+
+		to {
+			transform: scale(0.2);
+		}
+	}
+
+	animation: zoomin .4s ease-out; // !todo Доделать анимацию по выключению ховера
+	animation-fill-mode: forwards;
+}
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-wide-down {}
+
+@include for-desktop-down {}
+
+@include for-tablet-down {}
+
+@include for-phone-down {
+	.regions {
+		margin-bottom: 1em;
+	}
+
+	.regions .text-box {
+		width: 56%;
+		left: 35%;
+		padding: .75em 2em;
+	}
+
+}

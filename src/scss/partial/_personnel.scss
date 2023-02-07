@@ -1,0 +1,92 @@
+.cards {
+	width: 100%;
+	min-height: fit-content;
+	font-family: var(--ff-primary);
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 123.5%;
+	color: #FFFFFF;
+
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 5em;
+	margin-left: 3em;
+
+	&__item {
+		flex: 0 1 25%;
+		position: relative;
+		left: 5%;
+		padding: 1.2em 0.85em 0 2.27em;
+
+	}
+
+	&__item h5 {
+		font-size: 1.56em;
+		font-weight: 900;
+		padding: 0 0 1.5em;
+		line-height: 130%;
+	}
+
+	&__item p {
+		padding: 0 0 1.3em;
+	}
+
+
+	&__circle {
+		width: 67%;
+		position: absolute;
+		top: 6.75%;
+		left: -70%;
+		background-image: url(../img/Guretski.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+}
+
+.cards__item:first-of-type .cards__circle {
+	background-image: url(../img/Seleznev.png);
+}
+
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-wide-down {
+	.cards {
+		font-size: 0.8rem;
+	}
+}
+
+@include for-desktop-down {
+	.cards {
+		font-size: 0.75rem;
+	}
+}
+
+@include for-tablet-down {
+	.cards {
+		font-size: 0.7rem;
+	}
+}
+
+@include for-phone-down {
+	.cards {
+		font-size: 0.65rem;
+		width: 60%;
+		margin: 0 0 3em auto;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 1.5em;
+
+		&__item {
+			flex: 1 1 40%;
+
+		}
+
+		&__circle {
+			width: 50%;
+			left: -60%;
+		}
+	}
+
+}

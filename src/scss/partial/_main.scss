@@ -1,0 +1,199 @@
+.main {
+	display: block;
+	//overflow-y: auto; //dev
+	width: 84.375%;
+	margin: auto;
+
+	&__section {
+		margin: 0 0 clamp(8rem, calc(25vw - 12rem), 15rem); // Считает отступ от низа каждой секции -- Min value (128px) ends at 1280 px. Max value (240px) starts at 1728 px.
+		min-height: fit-content;
+		scroll-margin-top: 3em;
+		border: .2em solid transparent;
+		scroll-snap-align: end;
+	}
+}
+
+.main a,
+a:visited {
+	font-size: 1.12em;
+	text-decoration: underline;
+	color: currentColor;
+}
+
+.main__section:first-of-type .text-box::before {
+	content: url(/img/dec-button.svg);
+	position: absolute;
+	max-width: 50%;
+	top: -0;
+	display: none; //украшение блока выключение
+
+}
+
+.subtitle {
+	display: inline-block;
+	position: relative;
+	z-index: 3;
+	font-family: var(--ff-accent);
+	font-weight: 800;
+	font-style: normal;
+	font-size: var(--fs-accent);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	margin-bottom: 1.5em;
+	margin-left: 2em;
+}
+
+
+
+.subtitle h3::before { //Лого в заголовках
+	content: '';
+	min-width: 1em;
+	min-height: 1em;
+	position: absolute;
+	left: -1.5em;
+	top: -0.1em;
+	background-image: url(../img/logo_small.gif);
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	
+}
+
+//Подзаголовки 
+.subtitle:has(h4) {
+	margin-bottom: 0.5em;
+	margin-left: 1em;
+	font-size: calc(var(--fs-accent) * 0.6);
+	font-weight: 600;
+}
+
+
+
+.text-box {
+	word-wrap: break-word;
+	position: relative;
+	padding: 1.1em 1.4em 1.1em 1.4em;
+	// отступы отсчитываются от --fs-primary 
+	background: rgba(0, 0, 0, 0.66);
+	font-family: var(--ff-primary);
+	font-weight: 400;
+	font-size: var(--fs-primary);
+	line-height: 1.5em;
+	letter-spacing: 0.02em;
+	color: hsla(205, 100%, 82%, 1);
+	width: 47%;
+	left: 40%;
+	z-index: 10;
+	margin: 0 0 2em;
+	mix-blend-mode: hard-light;
+	scroll-snap-align: center;
+
+}
+
+#intro {
+	position: relative;
+	left: 13%;
+	width: 54.29%;
+	min-height: 10px;
+}
+
+// прокручиваемые участки
+.cylinder {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	height: 90vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
+.cylinder div:last-of-type {
+	margin-bottom: 0;
+	scroll-snap-align: end;
+}
+
+.cylinder::-webkit-scrollbar {
+	width: 0;
+}
+
+.cylinder::-moz-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.excellence .text-box,
+.contacts .text-box {
+	left: 0;
+}
+
+.sertificat img {
+	margin: 0 auto;
+}
+
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-wide-down {}
+
+@include for-desktop-down {
+	.text-box {
+		font-size: var(--fs-primary-d1200);
+	}
+
+	.subtitle {
+		font-size: var(--fs-accent-d1200);
+	}
+
+	.subtitle:has(h4) {
+		font-size: calc(var(--fs-accent-d1200) * 0.6);
+	}
+}
+
+@include for-tablet-down {
+	.text-box {
+		font-size: var(--fs-primary-d900);
+	}
+
+	.subtitle {
+		font-size: var(--fs-accent-d900);
+	}
+
+	.subtitle:has(h4) {
+		font-size: calc(var(--fs-accent-d900) * 0.6);
+	}
+}
+
+@include for-phone-down {
+
+	.main {
+		&__section {
+			margin-bottom: 5em;
+		}
+	}
+
+	.text-box {
+		left: auto;
+		width: 61%;
+		margin: 0 auto 2em;
+		font-size: var(--fs-primary-d600);
+	}
+
+	#intro {
+		left: auto;
+		width: 100%;
+		font-size: calc(var(--fs-primary-d600)*1.37);
+	}
+
+	.cylinder {
+		height: 32vh;
+	}
+
+	.subtitle {
+		font-size: var(--fs-accent-d600);
+	}
+
+	.subtitle:has(h4) {
+		font-size: calc(var(--fs-accent-d600) * 0.3129);
+	}
+
+}

@@ -1,0 +1,66 @@
+.software {
+	position: relative;
+}
+
+.slider { // * Временно отключенный слайдер с фотографиями
+	display: none;
+}
+
+.software>.text-box {
+	position: absolute;
+	top: 6.8em;
+	//transform: scale(1.001), translateX(1px);
+	left: 50%;
+	//display: none;
+}
+
+.imgwrapper { // * Обёртка вертикального слайдера
+	position: relative;
+	width: 48%;
+	min-height: fit-content;
+	left: 0;
+	top: 0;
+	margin-bottom: 40%;
+}
+
+.sf-slider { // * неготовый вертикальный слайдер
+	&__header {
+		cursor: pointer;
+		text-align: center;
+		outline: 2px solid greenyellow;
+	}
+
+	&__content {
+		overflow: hidden;
+	}
+
+	&__text {
+		width: 474px;
+		border: 1px solid #cccccc;
+		border-top: none;
+		padding: 15px;
+		text-align: left;
+		background: #eeeeee;
+		font-size: 14px;
+	}
+}
+
+
+// !todo заменить фото после того как Лёха их сделает в нормальном формате
+// ! МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА МЕДИА
+@include for-desktop-wide-down {}
+
+@include for-desktop-down {}
+
+@include for-tablet-down {}
+
+@include for-phone-down {
+
+	.imgwrapper {
+		margin: 0 auto 2em;
+	}
+
+	.software>.text-box {
+		position: static;
+	}
+}
